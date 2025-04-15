@@ -42,7 +42,7 @@ export const config = {
 		}),
 	],
 	callbacks: {
-		async session({ session, user, trigger, token }): any {
+		async session({ session, user, trigger, token }) {
 			session.user.id = token.sub as string;
 
 			if (trigger === 'update') {
